@@ -1,0 +1,90 @@
+<html>
+<body>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="age">age:</label>
+        <input type="text" id="age" name="age" placeholder="Enter age value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="education_num">education_num:</label>
+        <input type="education_num" id="education_num" name="education_num" placeholder="Enter education_num value (int)">
+    </div>
+    
+
+    <div class="form-group">
+        <label for="occupation">occupation:</label>
+        <input type="occupation" id="occupation" name="occupation" placeholder="Enter occupation value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="capital_gain">capital_gain:</label>
+        <input type="capital_gain" id="capital_gain" name="capital_gain" placeholder="Enter capital_gain value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="capital_loss">capital_loss:</label>
+        <input type="capital_loss" id="capital_loss" name="capital_loss" placeholder="Enter capital_loss value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="hours_per_week">hours_per_week:</label>
+        <input type="hours_per_week" id="hours_per_week" name="hours_per_week" placeholder="Enter hours_per_week value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="native_country">native_country:</label>
+        <input type="native_country" id="native_country" name="native_country" placeholder="Enter native_country value (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="workclass">workclass:</label>
+        <select id="workclass" name="workclass">
+          <option value="Self-emp-not-inc">Self-emp-not-inc</option>
+          <option value="Private">Private</option>
+          <option value="State-gov">State-gov</option>
+          <option value="Federal-gov">Federal-gov</option>
+          <option value="Local-gov">Local-gov</option>
+          <option value="Self-emp-inc">Self-emp-inc</option>
+          <option value="Without-pay">Without-pay</option>
+          <option value="Never-worked">Never-worked</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="marital_status">marital_status:</label>
+        <select id="marital_status" name="marital_status">
+          <option value="Married-civ-spouse">Married-civ-spouse</option>
+          <option value="Divorced">Divorced</option>
+          <option value="Married-spouse-absent">Married-spouse-absent</option>
+          <option value="Never-married">Never-married</option>
+          <option value="Separated">Separated</option>
+          <option value="Married-AF-spouse">Married-AF-spouse</option>
+          <option value="Widowed">Widowed</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="race">race:</label>
+        <select id="race" name="race">
+          <option value="White">White</option>
+          <option value="Black">Black</option>
+          <option value="Asian-Pac-Islander">Asian-Pac-Islander</option>
+          <option value="Amer-Indian-Eskimo">Amer-Indian-Eskimo</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="sex">sex:</label>
+        <select id="sex" name="sex">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    
+    <div style="clear:both;"></div>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

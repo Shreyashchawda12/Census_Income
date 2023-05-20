@@ -11,7 +11,7 @@ def error_message_detail(error,error_detail:sys):
 
     return error_message
 
-class CustomException(Exception):
+class customException(Exception):
     
     def __init__(self, error_message, error_detail:sys):
         super().__init__(error_message)
@@ -28,4 +28,4 @@ if __name__=="__main__":
         a=1/0
     except Exception as e:
         logging.info('Decision by zero') 
-        raise CustomException(e,sys)
+        raise customException(e,sys)
