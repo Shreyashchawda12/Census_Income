@@ -32,6 +32,9 @@ def predict_datapoint():
             hours_per_week=int(request.form.get('hours_per_week')),
             native_country=int(request.form.get('native_country'))
             
+            
+            
+            
            
         )
         final_new_data=data.get_data_as_dataframe()
