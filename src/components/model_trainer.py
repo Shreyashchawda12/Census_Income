@@ -2,6 +2,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
+from imblearn.over_sampling import SMOTE
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from src.Exception import customException
@@ -33,6 +34,9 @@ class ModelTrainer:
                 test_array[:,-1]
             )
             
+            smote=SMOTE()
+            x_rec,y_rec=smote.fit_resample(X_train,y_train)
+            
             ## Train multiple models
 
             models={
@@ -40,7 +44,7 @@ class ModelTrainer:
                 'DecisionTree':DecisionTreeClassifier(),
                 'RandomForest':RandomForestClassifier()
         }
-            model_report:dict=evaluate_model(X_train,y_train,X_test,y_test,models)
+            model_report:dict=evaluate_model(x_rec,y_rec,X_test,y_test,models)
             print(model_report)
             print('\n====================================================================================\n')
             logging.info(f'Model Report : {model_report}')
