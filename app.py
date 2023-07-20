@@ -8,6 +8,8 @@ app=application
 
 
 
+
+
 @app.route('/')
 def home_page():
     return render_template('index.html')
@@ -52,6 +54,8 @@ def predict_datapoint():
             
 
         return render_template('results.html',final_results = final_result(pred))
+
+
 
 
 
