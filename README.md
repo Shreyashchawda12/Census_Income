@@ -44,7 +44,7 @@ AWS_REGION = ap-southeast-2
 
 AWS_ECR_LOGIN_URL = 536633663342.dkr.ecr.ap-southeast-2.amazonaws.com
 
-ECR_REPOSITORY_NAME = credit_card_prediction
+ECR_REPOSITORY_NAME = census_income
 
 
 
